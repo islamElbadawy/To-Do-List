@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.to-do-container{
+    width: 600px;
+    margin: 30px auto 0;
+    background-color: #f6f6f6;
+}
+
+.to-do-container .add-task{
+    padding: 15px;
+    background-color: #009688;
+    position: relative;
+}
+
+.to-do-container .add-task input{
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: calc(100% - 15px);
+    color: #fff;
+    font-size: 20px;
+}
+
+.to-do-container .add-task input:focus{
+    outline: none;
+}
+
+.to-do-container .add-task .plus{
+    position: absolute;
+    right: 12px;
+    height: 43px;
+    width: 43px;
+    background-color: #fff;
+    border-radius: 50%;
+    line-height: 43px;
+    text-align: center;
+    color: #009688;
+    cursor: pointer;
+    font-size: 30px;
+    transition: transform 0.3s;
+}
+
+.to-do-container .add-task .plus:hover{
+    transform: rotate(90deg);
+}
+
+.to-do-container .tasks-content{
+    padding: 15px;
+}
+
+.to-do-container .tasks-content > span{
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.to-do-container .tasks-content > span:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.to-do-container .default{
+    color: #777;
+    font-size: 15px;
+}
+
+.to-do-container .tasks-content .task-box .delete{
+    float: right;
+    background-color: #E91E63;
+    padding: 4px 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.to-do-container .tasks-content .task-box.finished{
+    text-decoration: line-through;
+}
+
+.tasks-stats{
+    overflow: hidden;
+    margin: 10px auto;
+    width: 600px;
+    font-size: 12px;
+}
+
+.tasks-stats .tasks-count{
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.tasks-stats .tasks-done{
+    width: 50%;
+    float: right;
+    padding: 10px;
+    text-align: right;
+}
+
+.tasks-stats .tasks-count span,
+.tasks-stats .tasks-done span{
+    color: #fff;
+    padding: 1px 5px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.tasks-stats .tasks-count span{
+    background-color: #E91E63;
+}
+
+.tasks-stats .tasks-done span{
+    background-color: #03a9f4;
+}
